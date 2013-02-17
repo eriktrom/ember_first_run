@@ -1,0 +1,36 @@
+require 'rake-pipeline-web-filters'
+
+output "compiled"
+
+input 'emberguides' do
+
+
+  match "**/*.coffee" do
+    coffee_script(:no_wrap => true)
+  end
+
+  match "**/*.scss" do
+    sass
+  end
+
+  match "**/*.handlebars" do
+    copy
+  end
+
+  match "**/*.js" do
+    copy
+  end
+
+  match "**/*.css" do
+    copy
+  end
+
+  match "index.html" do
+    copy
+  end
+
+  match "**/*.css" do
+    concat "application.css"
+  end
+
+end

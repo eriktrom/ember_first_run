@@ -1,5 +1,5 @@
 {
   "modules": "cjs",
-  "appDir": "./"
+  "appDir": "./compiled"
 }
 
