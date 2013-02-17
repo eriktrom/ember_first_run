@@ -11,6 +11,8 @@ var App = window.App = require('./app');
 
 App.store = require('./store');
 
+App.Guide = require('./models/guide');
+App.GuidesRoute = require('./routes/guides_route');
 
 require('./routes');
 

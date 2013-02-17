@@ -18,8 +18,27 @@ var App = window.App = require('./app');
 
 App.store = require('./store');
 
+App.Guide = require('./models/guide');
+App.GuidesRoute = require('./routes/guides_route');
 
 require('./routes');
+
+
+});require.register("models/guide.js", function(module, exports, require, global){
+var Guide = DS.Model.extend({
+
+});
+
+Guide.FIXTURES = [{
+  id: 1,
+  title: 'topic 1'
+}, {
+  id: 2,
+  title: 'topic 2'
+}];
+
+
+module.exports = Guide;
 
 
 });require.register("routes.js", function(module, exports, require, global){
@@ -30,15 +49,25 @@ App.Router.map(function() {
 });
 
 
+});require.register("routes/guides_route.js", function(module, exports, require, global){
+var GuidesRoute = Ember.Route.extend({
+  model: function() {
+    return App.Guide.find();
+  }
+});
+
+module.exports = GuidesRoute;
+
+
 });require.register("store.js", function(module, exports, require, global){
 // by default, persist application data to localStorage change this file
 // to use the RESTAdapter or your own adapter.
 
-require('./vendor/localstorage_adapter');
+// require('./vendor/localstorage_adapter');
 
 module.exports = DS.Store.extend({
   revision: 11,
-  adapter: DS.LSAdapter.create()
+  adapter: DS.FixtureAdapter.create()
 }).create();
 
 
@@ -71,10 +100,23 @@ function program1(depth0,data) {
 Ember.TEMPLATES['guides'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compiledVersion = '1.0.rc.2';
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  var buffer = '', stack1, hashTypes, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
   
+  var buffer = '', hashTypes;
+  data.buffer.push("\n  ");
+  hashTypes = {};
+  data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "guide.id", {hash:{},contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data})));
+  data.buffer.push("\n");
+  return buffer;
+  }
 
-
-  data.buffer.push("Table of Contents");
+  data.buffer.push("<h2>Table of Contents</h2>\n");
+  hashTypes = {};
+  stack1 = helpers.each.call(depth0, "guide", "in", "controller", {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0,depth0,depth0],types:["ID","ID","ID"],hashTypes:hashTypes,data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  return buffer;
   
 });
 
