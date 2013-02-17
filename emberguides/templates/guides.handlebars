@@ -1,4 +1,16 @@
-<h2>Table of Contents</h2>
-{{#each guide in controller}}
-  {{ guide.id }}
-{{/each}}
+<div class="span3">
+  <ul>
+    {{#each guide in controller}}
+    <li>{{#linkTo "guide" guide}}{{ guide.title }}{{/linkTo}}</li>
+    {{/each}}
+  </ul>
+</div>
+
+
+<div class="span6">
+  {{ outlet }}
+</div>
+
+
+
+

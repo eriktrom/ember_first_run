@@ -1,5 +1,5 @@
 var Guide = DS.Model.extend({
-
+  title: DS.attr('string')
 });
 
 Guide.FIXTURES = [{
@@ -12,4 +12,3 @@ Guide.FIXTURES = [{
 
 
 module.exports = Guide;
-
