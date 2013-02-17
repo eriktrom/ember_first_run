@@ -9,10 +9,11 @@
 
 guard 'shell' do
 
+  ember_app_dir = 'emberguides'
   built_files = %W[application.js index.js templates.js]
 
-  watch(/emberguides\/(.*)/) do |m|
-    `ember build` unless built_files.include?(m[1])
+  watch(/#{ember_app_dir}\/(.*)/) do |m|
+    `cd #{ember_app_dir} && ember build` unless built_files.include?(m[1])
   end
 
 end

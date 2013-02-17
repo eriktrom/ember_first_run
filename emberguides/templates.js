@@ -33,14 +33,4 @@ helpers = helpers || Ember.Handlebars.helpers; data = data || {};
   
 });
 
-Ember.TEMPLATES['index'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
-this.compiledVersion = '1.0.rc.2';
-helpers = helpers || Ember.Handlebars.helpers; data = data || {};
-  
-
-
-  data.buffer.push("<h2>Index</h2>\n\n");
-  
-});
-
 
