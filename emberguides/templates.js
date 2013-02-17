@@ -23,6 +23,16 @@ function program1(depth0,data) {
   
 });
 
+Ember.TEMPLATES['guides'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compiledVersion = '1.0.rc.2';
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  
+
+
+  data.buffer.push("Table of Contents");
+  
+});
+
 Ember.TEMPLATES['index'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
 this.compiledVersion = '1.0.rc.2';
 helpers = helpers || Ember.Handlebars.helpers; data = data || {};

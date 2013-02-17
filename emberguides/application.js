@@ -26,9 +26,7 @@ require('./routes');
 var App = require('./app');
 
 App.Router.map(function() {
-  // this.resource('guides', function() {
-  //   this.resource('guide', {path: ':table_id'})
-  // });
+  this.resource('guides');
 });
 
 
@@ -67,6 +65,16 @@ function program1(depth0,data) {
   data.buffer.push(escapeExpression(helpers._triageMustache.call(depth0, "outlet", {hash:{},contexts:[depth0],types:["ID"],hashTypes:hashTypes,data:data})));
   data.buffer.push("\n\n");
   return buffer;
+  
+});
+
+Ember.TEMPLATES['guides'] = Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compiledVersion = '1.0.rc.2';
+helpers = helpers || Ember.Handlebars.helpers; data = data || {};
+  
+
+
+  data.buffer.push("Table of Contents");
   
 });
 
