@@ -1,4 +1,4 @@
-GuidesRoute = Ember.Route.extend
+class GuidesRoute extends Ember.Route
   model: ->
     App.Guide.find()
 

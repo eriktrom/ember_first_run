@@ -12,9 +12,6 @@
     }, {
       id: 2,
       title: 'topic 2'
-    }, {
-      id: 3,
-      title: 'topic 3'
     }
   ];
 

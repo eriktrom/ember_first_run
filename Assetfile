@@ -4,9 +4,8 @@ output "compiled"
 
 input 'emberguides' do
 
-
   match "**/*.coffee" do
-    coffee_script(:no_wrap => true)
+    coffee_script#(:no_wrap => true)
   end
 
   match "**/*.scss" do
@@ -21,9 +20,9 @@ input 'emberguides' do
     copy
   end
 
-  match "**/*.css" do
-    copy
-  end
+  # match "**/*.css" do
+  #   copy
+  # end
 
   match "index.html" do
     copy
