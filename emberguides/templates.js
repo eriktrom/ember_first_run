@@ -10,7 +10,7 @@ function program1(depth0,data) {
   data.buffer.push("Home");
   }
 
-  data.buffer.push("<h1>Ember App</h1>\n\n<nav>\n  <ul>\n    <li>");
+  data.buffer.push("<h1>Ember blah</h1>\n\n<nav>\n  <ul>\n    <li>");
   hashTypes = {};
   options = {hash:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[depth0],types:["STRING"],hashTypes:hashTypes,data:data};
   stack2 = ((stack1 = helpers.linkTo),stack1 ? stack1.call(depth0, "index", options) : helperMissing.call(depth0, "linkTo", "index", options));
