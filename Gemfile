@@ -12,3 +12,6 @@ gem 'uglifier'
 gem 'yui-compressor'
 gem 'sass'
 gem 'compass'
+
+gem 'pry'
+gem 'pry-doc'

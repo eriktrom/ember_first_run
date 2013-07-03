@@ -20,16 +20,30 @@ input 'emberguides' do
     copy
   end
 
-  # match "**/*.css" do
-  #   copy
-  # end
-
   match "index.html" do
     copy
   end
 
   match "**/*.css" do
     concat "application.css"
+  end
+
+end
+
+if ENV['PIPE_ENV'] == 'production'
+
+  input 'compiled' do
+    output 'production'
+
+    match "application.js" do
+      uglify
+    end
+
+    match 'application.css' do
+      yui_css
+    end
+
+    match 'index.html' do copy; end
   end
 
 end
