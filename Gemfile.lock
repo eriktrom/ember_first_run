@@ -39,7 +39,7 @@ GEM
     pry-doc (0.4.4)
       pry (>= 0.9.9.6)
       yard (~> 0.8.1)
-    rack (1.5.2)
+    rack (2.2.3)
     rake (0.9.6)
     rake-pipeline (0.7.0)
       json
